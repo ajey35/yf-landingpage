@@ -10,6 +10,8 @@ import BNPLProblemsSection from "./components/BNPLProblemsSection"
 import UserFlowSection from "./components/UserFlowSection"
 import HowItWorksFlow from "./components/HowItWorksFlow"
 import WhyWeWinSection from "./components/WhyWeWinSection"
+import GoToMarketSection from "./components/GoToMarketSection"
+import TeamSection from "./components/TeamSection"
 
 export default function Home() {
   useEffect(() => {
@@ -122,16 +124,20 @@ export default function Home() {
 
       <BNPLProblemsSection/>
 
-      <div className="scroll-reveal animate-fade-in-up">
+      <div id="user-flow" className="scroll-reveal animate-fade-in-up">
         <UserFlowSection />
       </div>
 
-      <div className="scroll-reveal animate-fade-in-up">
+      <div id="how-it-works-flow" className="scroll-reveal animate-fade-in-up">
         <HowItWorksFlow />
       </div>
 
-      <div className="scroll-reveal animate-fade-in-up">
+      <div id="why-we-win" className="scroll-reveal animate-fade-in-up">
         <WhyWeWinSection />
+      </div>
+
+      <div id="go-to-market" className="scroll-reveal animate-fade-in-up">
+        <GoToMarketSection />
       </div>
 
       {/* How It Works Section */}
@@ -169,6 +175,9 @@ export default function Home() {
 
       {/* Complete Flexibility Section */}
       <FlexibilitySection />
+
+      
+      <TeamSection />
 
       {/* CTA Section */}
       <section className="py-12 sm:py-20 lg:py-24 px-2 sm:px-4 lg:px-8">
