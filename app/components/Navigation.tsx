@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { ArrowRight, Sparkles } from "lucide-react"
+import Link from "next/link"
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -32,53 +33,42 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-18">
           {/* Enhanced Logo */}
-          <div className="flex items-center group cursor-pointer min-w-0">
+          <Link href="/" className="flex items-center gap-2 sm:gap-3 group cursor-pointer min-w-0" prefetch={false}>
             {/* Logo Icon */}
-            <div className="relative mr-3 flex-shrink-0 flex items-center justify-center">
+            <div className="flex-shrink-0 flex items-center justify-center">
               <img
                 src="/image.png"
                 alt="Yumi Finance Logo"
-                className="h-10 w-10 lg:h-12 lg:w-12 object-contain drop-shadow-lg rounded-md bg-white/5 p-1 border border-white/10"
-                style={{ maxWidth: '3rem', height: 'auto' }}
+                className="h-8 w-8 sm:h-10 sm:w-10 object-contain drop-shadow-lg rounded-md bg-white/5 p-1 border border-white/10"
+                style={{ maxWidth: '2.5rem', height: 'auto' }}
               />
             </div>
-
             {/* Logo Text */}
-            <div className="flex flex-col min-w-0">
-              <span className="text-title text-lg sm:text-xl lg:text-2xl font-bold text-white group-hover:text-gradient transition-all duration-300 tracking-tight truncate">
+            <div className="flex flex-col min-w-0 justify-center">
+              <span className="text-title text-base sm:text-lg font-bold text-white group-hover:text-gradient transition-all duration-300 tracking-tight truncate">
                 Yumi Finance
               </span>
               <span className="text-caption text-xs text-[#C9F299]/70 font-medium tracking-wider hidden sm:block group-hover:text-[#C9F299] transition-colors duration-300 truncate">
                 BNPL REIMAGINED
               </span>
             </div>
-          </div>
+          </Link>
 
           {/* Enhanced Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1 lg:space-x-2">
             {[
-              { label: "Features", id: "features" },
-              { label: "How it Works", id: "how-it-works" },
+              { label: "Features", href: "/#features" },
+              { label: "How it Works", href: "/#how-it-works" },
               { label: "For Merchants", href: "/merchant" },
             ].map((item, index) => (
               <div key={item.label} className="relative group">
-                {item.href ? (
-                  <a
-                    href={item.href}
-                    className="relative px-4 lg:px-6 py-2 lg:py-3 text-body text-sm lg:text-base font-medium text-gray-300 hover:text-white transition-all duration-300 rounded-xl hover:bg-white/5 group"
-                  >
-                    {item.label}
-                    <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#C9F299] to-[#A8E063] group-hover:w-full group-hover:left-0 transition-all duration-300 rounded-full"></div>
-                  </a>
-                ) : (
-                  <button
-                    onClick={() => scrollToSection(item.id!)}
-                    className="relative px-4 lg:px-6 py-2 lg:py-3 text-body text-sm lg:text-base font-medium text-gray-300 hover:text-white transition-all duration-300 rounded-xl hover:bg-white/5 group"
-                  >
-                    {item.label}
-                    <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#C9F299] to-[#A8E063] group-hover:w-full group-hover:left-0 transition-all duration-300 rounded-full"></div>
-                  </button>
-                )}
+                <a
+                  href={item.href}
+                  className="relative px-4 lg:px-6 py-2 lg:py-3 text-body text-sm lg:text-base font-medium text-gray-300 hover:text-white transition-all duration-300 rounded-xl hover:bg-white/5 group"
+                >
+                  {item.label}
+                  <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#C9F299] to-[#A8E063] group-hover:w-full group-hover:left-0 transition-all duration-300 rounded-full"></div>
+                </a>
               </div>
             ))}
 
@@ -99,22 +89,23 @@ export default function Navigation() {
           {/* Enhanced Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden relative p-3 rounded-xl hover:bg-white/5 transition-all duration-300 focus-ring group"
+            className="md:hidden flex items-center justify-center p-3 rounded-xl hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[#C9F299] transition-all duration-300 group"
+            aria-label="Open menu"
           >
-            <div className="relative w-5 h-5">
+            <div className="relative w-6 h-6 flex flex-col justify-between items-center">
               <span
-                className={`absolute block w-5 h-0.5 bg-white rounded-full transition-all duration-300 ${
-                  isOpen ? "rotate-45 top-2" : "top-0"
+                className={`block absolute h-0.5 w-6 bg-white rounded-full transition-all duration-300 ${
+                  isOpen ? "rotate-45 top-3" : "top-0"
                 }`}
               ></span>
               <span
-                className={`absolute block w-5 h-0.5 bg-white rounded-full transition-all duration-300 top-2 ${
+                className={`block absolute h-0.5 w-6 bg-white rounded-full transition-all duration-300 top-3 ${
                   isOpen ? "opacity-0" : "opacity-100"
                 }`}
               ></span>
               <span
-                className={`absolute block w-5 h-0.5 bg-white rounded-full transition-all duration-300 ${
-                  isOpen ? "-rotate-45 top-2" : "top-4"
+                className={`block absolute h-0.5 w-6 bg-white rounded-full transition-all duration-300 ${
+                  isOpen ? "-rotate-45 top-3" : "top-6"
                 }`}
               ></span>
             </div>

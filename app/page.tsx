@@ -33,52 +33,52 @@ export default function Home() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      <section className="min-h-[80vh] flex items-center justify-center relative overflow-hidden px-2 sm:px-4">
         {/* Background Elements */}
-        <div className="absolute top-20 left-10 w-40 h-40 bg-[#C9F299]/8 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-[#A8E063]/6 rounded-full blur-2xl animate-float"></div>
+        <div className="absolute top-10 left-2 w-28 h-28 sm:w-40 sm:h-40 bg-[#C9F299]/8 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-10 right-2 w-24 h-24 sm:w-32 sm:h-32 bg-[#A8E063]/6 rounded-full blur-2xl animate-float"></div>
 
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-          <div className="text-center space-y-8">
-            <div className="space-y-6 animate-fade-in-up">
-              <h1 className="text-hero text-4xl sm:text-5xl lg:text-6xl text-white">
+        <div className="relative z-10 w-full max-w-3xl sm:max-w-6xl mx-auto px-2 sm:px-4 lg:px-8 pt-16 pb-10 sm:pt-20 sm:pb-16">
+          <div className="text-center space-y-6 sm:space-y-8">
+            <div className="space-y-4 sm:space-y-6 animate-fade-in-up">
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white text-hero">
                 The Future of <span className="text-gradient">Payments</span>
               </h1>
-              <p className="text-body text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto">
+              <p className="text-body text-base sm:text-lg lg:text-2xl text-gray-300 max-w-2xl sm:max-w-4xl mx-auto">
                 Experience the first on-chain Buy Now, Pay Later platform that pays you back through yield generation
               </p>
             </div>
 
             <div
-              className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center max-w-md sm:max-w-none mx-auto animate-fade-in-up"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center items-center max-w-xs sm:max-w-none mx-auto animate-fade-in-up"
               style={{ animationDelay: "200ms" }}
             >
-              <button className="group btn-primary w-full sm:w-auto px-8 py-3 rounded-full text-body focus-ring">
+              <button className="group btn-primary w-full sm:w-auto px-6 sm:px-8 py-3 rounded-full text-body focus-ring">
                 <span className="flex items-center justify-center space-x-2">
                   <span>Get Started</span>
                   <ArrowRight size={16} className="group-hover:translate-x-1 transition-smooth" />
                 </span>
               </button>
-              <button className="group btn-secondary w-full sm:w-auto px-8 py-3 rounded-full text-body focus-ring">
+              <button className="group btn-secondary w-full sm:w-auto px-6 sm:px-8 py-3 rounded-full text-body focus-ring">
                 <span>Learn More</span>
               </button>
             </div>
 
             <div
-              className="grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-16 max-w-4xl mx-auto mt-16 animate-fade-in-up"
+              className="grid  grid-cols-3 sm:grid-cols-3 gap-6 sm:gap-8 lg:gap-16 max-w-xs pt-6 sm:max-w-4xl mx-auto mt-20 sm:mt-20 animate-fade-in-up"
               style={{ animationDelay: "400ms" }}
             >
               <div className="text-center">
-                <div className="text-display text-4xl lg:text-5xl text-gradient mb-2">0%</div>
-                <p className="text-body text-gray-400">Interest Rate</p>
+                <div className="text-display text-3xl sm:text-4xl lg:text-5xl text-gradient mb-2">0%</div>
+                <p className="text-body text-gray-400 text-sm sm:text-base">Interest Rate</p>
               </div>
               <div className="text-center">
-                <div className="text-display text-4xl lg:text-5xl text-gradient mb-2">100%</div>
-                <p className="text-body text-gray-400">On-Chain</p>
+                <div className="text-display text-3xl sm:text-4xl lg:text-5xl text-gradient mb-2">100%</div>
+                <p className="text-body text-gray-400 text-sm sm:text-base">On-Chain</p>
               </div>
               <div className="text-center">
-                <div className="text-display text-4xl lg:text-5xl text-gradient mb-2">24/7</div>
-                <p className="text-body text-gray-400">Available</p>
+                <div className="text-display text-3xl sm:text-4xl lg:text-5xl text-gradient mb-2">24/7</div>
+                <p className="text-body text-gray-400 text-sm sm:text-base">Available</p>
               </div>
             </div>
           </div>
@@ -86,9 +86,9 @@ export default function Home() {
       </section>
 
       {/* Benefits Section */}
-      <section id="features" className="py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+      <section id="features" className="py-12 sm:py-20 lg:py-24 px-2 sm:px-4 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             <BenefitCard
               iconType="zero-interest"
               title="Zero Interest"
@@ -118,16 +118,16 @@ export default function Home() {
       </section>
 
       {/* How It Works Section */}
-      <section id="how-it-works" className="py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white/[0.01]">
+      <section id="how-it-works" className="py-12 sm:py-20 lg:py-24 px-2 sm:px-4 lg:px-8 bg-white/[0.01]">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 scroll-reveal">
-            <p className="text-body text-gray-400 mb-4">Three simple steps to start earning while you pay</p>
-            <h2 className="text-display text-3xl sm:text-4xl lg:text-5xl mb-6 text-white">
+          <div className="text-center mb-10 sm:mb-16 scroll-reveal px-2">
+            <p className="text-body text-gray-400 mb-2 sm:mb-4 text-sm sm:text-base break-words">Three simple steps to start earning while you pay</p>
+            <h2 className="text-display text-2xl sm:text-4xl lg:text-5xl mb-4 sm:mb-6 text-white break-words">
               How It <span className="text-gradient">Works</span>
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-12 lg:gap-16 max-w-full px-2">
             <HowItWorksStep
               step={1}
               title="Sign Up & Verify"
@@ -154,29 +154,29 @@ export default function Home() {
       <FlexibilitySection />
 
       {/* CTA Section */}
-      <section className="py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-12 sm:py-20 lg:py-24 px-2 sm:px-4 lg:px-8">
+        <div className="max-w-2xl sm:max-w-4xl mx-auto text-center">
           <div className="scroll-reveal">
-            <h2 className="text-display text-3xl sm:text-4xl lg:text-5xl mb-6 text-white">
+            <h2 className="text-display text-2xl sm:text-4xl lg:text-5xl mb-4 sm:mb-6 text-white">
               Ready to Start <span className="text-gradient">Earning</span>?
             </h2>
-            <p className="text-body text-lg lg:text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+            <p className="text-body text-base sm:text-lg lg:text-xl text-gray-400 mb-6 sm:mb-8 max-w-xl mx-auto">
               Join thousands of smart shoppers who are already earning cashback on their purchases
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center max-w-md sm:max-w-none mx-auto">
-              <button className="group btn-primary w-full sm:w-auto px-8 py-3 rounded-full text-body focus-ring">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center items-center max-w-xs sm:max-w-none mx-auto">
+              <button className="group btn-primary w-full sm:w-auto px-6 sm:px-8 py-3 rounded-full text-body focus-ring">
                 <span className="flex items-center justify-center space-x-2">
                   <span>Get Early Access</span>
                   <ArrowRight size={16} className="group-hover:translate-x-1 transition-smooth" />
                 </span>
               </button>
-              <button className="btn-secondary w-full sm:w-auto px-8 py-3 rounded-full text-body focus-ring">
+              <button className="btn-secondary w-full sm:w-auto px-6 sm:px-8 py-3 rounded-full text-body focus-ring">
                 Join Waitlist
               </button>
             </div>
 
-            <p className="text-caption text-gray-500 text-sm mt-6">
+            <p className="text-caption text-gray-500 text-xs sm:text-sm mt-4 sm:mt-6">
               No credit check required • Available in 50+ countries • Launch Q2 2025
             </p>
           </div>
@@ -184,29 +184,29 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-white/5">
+      <footer className="py-8 px-2 sm:py-12 sm:px-4 lg:px-8 border-t border-white/5">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-            <div className="flex items-center">
-              <img src="/image.png" alt="Yumi Finance Logo" className="h-10 w-8 mr-1" />
-              <span className="text-title text-lg font-semibold text-white">Yumi Finance</span>
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 md:space-x-4">
+            <div className="flex items-center min-w-0">
+              <img src="/image.png" alt="Yumi Finance Logo" className="h-8 w-8 sm:h-10 sm:w-10 md:h-10 md:w-8 mr-2 object-contain" />
+              <span className="text-title text-base sm:text-lg font-semibold text-white truncate">Yumi Finance</span>
             </div>
-            <div className="flex flex-wrap justify-center md:justify-end gap-6 text-gray-400">
-              <a href="#" className="text-body hover:text-white transition-smooth text-sm">
+            <div className="flex flex-wrap justify-center md:justify-end gap-4 sm:gap-6 text-gray-400 w-full md:w-auto">
+              <a href="#" className="text-body hover:text-white transition-smooth text-xs sm:text-sm">
                 Privacy Policy
               </a>
-              <a href="#" className="text-body hover:text-white transition-smooth text-sm">
+              <a href="#" className="text-body hover:text-white transition-smooth text-xs sm:text-sm">
                 Terms of Service
               </a>
-              <a href="#" className="text-body hover:text-white transition-smooth text-sm">
+              <a href="#" className="text-body hover:text-white transition-smooth text-xs sm:text-sm">
                 Support
               </a>
-              <a href="#" className="text-body hover:text-white transition-smooth text-sm">
+              <a href="#" className="text-body hover:text-white transition-smooth text-xs sm:text-sm">
                 Documentation
               </a>
             </div>
           </div>
-          <div className="mt-8 pt-6 border-t border-white/5 text-center text-gray-500 text-caption text-sm">
+          <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-white/5 text-center text-gray-500 text-caption text-xs sm:text-sm">
             <p>&copy; 2024 Yumi Finance. All rights reserved. The first BNPL that pays you back.</p>
           </div>
         </div>

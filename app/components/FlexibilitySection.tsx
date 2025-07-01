@@ -2,15 +2,11 @@ import { Check, CreditCard, TrendingUp } from "lucide-react"
 
 export default function FlexibilitySection() {
   return (
-    <section className="py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+    <section className="py-10 lg:py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
           {/* Left Column - Features */}
           <div className="scroll-reveal">
-            <div className="flex items-center mb-8">
-              <TrendingUp size={20} className="text-[#C9F299] mr-3" />
-              <span className="text-body text-gray-400">Complete flexibility</span>
-            </div>
 
             <h2 className="text-display text-4xl sm:text-5xl lg:text-6xl mb-12 text-white leading-tight">
               Complete <span className="text-gradient">Flexibility</span>

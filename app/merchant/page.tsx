@@ -42,7 +42,7 @@ export default function MerchantPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+      <section className="py-6 lg:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-display text-3xl sm:text-4xl lg:text-5xl mb-6 text-white">
@@ -88,37 +88,37 @@ export default function MerchantPage() {
       </section>
 
       {/* Trust Signals */}
-      <section className="py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white/[0.01]">
+      <section className="py-12 sm:py-20 lg:py-24 px-2 sm:px-4 lg:px-8 bg-white/[0.01]">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-display text-3xl sm:text-4xl lg:text-5xl mb-6 text-white">
+          <div className="text-center mb-10 sm:mb-16">
+            <h2 className="text-display text-2xl sm:text-4xl lg:text-5xl mb-4 sm:mb-6 text-white">
               Trusted by <span className="text-gradient">Leading Brands</span>
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+          <div className="grid  grid-cols-3 lg:grid-cols-3 gap-8 sm:gap-12 lg:gap-16 text-center">
             <div>
-              <div className="benefit-icon mx-auto">
-                <Building2 size={24} className="text-black" />
+              <div className="benefit-icon mx-auto mb-2">
+                <Building2 size={30} className="text-black" />
               </div>
-              <div className="text-display text-4xl lg:text-5xl text-gradient mb-3">100+</div>
-              <p className="text-body text-gray-400 text-lg">Partner Merchants</p>
+              <div className="text-display text-2xl sm:text-4xl lg:text-5xl text-gradient mb-2 sm:mb-3 lg:mb-4">100+</div>
+              <p className="text-body text-gray-400 text-base sm:text-lg lg:text-xl">Partner Merchants</p>
             </div>
 
             <div>
-              <div className="benefit-icon mx-auto">
-                <TrendingUp size={24} className="text-black" />
+              <div className="benefit-icon mx-auto mb-2">
+                <TrendingUp size={30} className="text-black" />
               </div>
-              <div className="text-display text-4xl lg:text-5xl text-gradient mb-3">₹50Cr+</div>
-              <p className="text-body text-gray-400 text-lg">Volume Processed</p>
+              <div className="text-display text-2xl sm:text-4xl lg:text-5xl text-gradient mb-2 sm:mb-3 lg:mb-4">₹50Cr+</div>
+              <p className="text-body text-gray-400 text-base sm:text-lg lg:text-xl">Volume Processed</p>
             </div>
 
             <div>
-              <div className="benefit-icon mx-auto">
-                <Users size={24} className="text-black" />
+              <div className="benefit-icon mx-auto mb-2">
+                <Users size={30} className="text-black" />
               </div>
-              <div className="text-display text-4xl lg:text-5xl text-gradient mb-3">25%</div>
-              <p className="text-body text-gray-400 text-lg">Conversion Increase</p>
+              <div className="text-display text-2xl sm:text-4xl lg:text-5xl text-gradient mb-2 sm:mb-3 lg:mb-4">25%</div>
+              <p className="text-body text-gray-400 text-base sm:text-lg lg:text-xl">Conversion Increase</p>
             </div>
           </div>
         </div>
