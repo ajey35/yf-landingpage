@@ -1,13 +1,14 @@
 # 🌿 Yumi Finance — On-Chain BNPL Landing Page
 
-**Yumi Finance** is the first fully on-chain **Buy Now, Pay Later (BNPL)** platform that rewards users as they pay.  
-This landing page showcases Yumi’s consumer benefits, merchant value props, and sleek Web2-style design — powered by modern web tech.
+**Yumi Finance** is the first fully on-chain **Buy Now, Pay Later (BNPL)** solution that pays you back.
+
+This landing page is designed to communicate Yumi’s value to consumers and merchants — featuring a modern, responsive UI inspired by Apple and Klarna. The interface avoids traditional “web3” aesthetics in favor of a clean, tech-forward experience.
 
 ---
 
 ## 📸 Preview
 
-> ✨ Clean, minimal, futuristic UI with blur effects, smooth animations, and fully responsive layout (MacBook 14" & iPhone 16 Pro).
+> ✨ Minimalist UI. Blur-based backgrounds. Smooth animations. Fully responsive.
 
 ![Hero Screenshot](./public/preview-hero.png)  
 ![Features Screenshot](./public/preview-features.png)
@@ -16,35 +17,20 @@ This landing page showcases Yumi’s consumer benefits, merchant value props, an
 
 ## 🚀 Tech Stack
 
-- **Next.js (App Router + TypeScript)**
+- **Next.js** (App Router + TypeScript)
 - **Tailwind CSS** (utility-first styling)
 - **Lucide React Icons**
-- **Responsive & Mobile-first Design**
-- Smooth **scroll-reveal animations**
+- **Fully Responsive Design**
+- **Scroll-reveal Animations**
 - Optional **Framer Motion** support
 
 ---
 
-## 🛠️ Getting Started
+## 🛠 Getting Started
 
 ### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/yumi-finance-landing.git
-
-
-```bash
 cd yumi-finance-landing
 
-```
-```bash
-npm install  # or yarn install
-
-```
-
-
-```bash
-
-npm run dev # or yarn dev
-
-```
