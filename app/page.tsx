@@ -6,6 +6,8 @@ import Navigation from "./components/Navigation"
 import HowItWorksStep from "./components/HowItWorksStep"
 import BenefitCard from "./components/BenefitCard"
 import FlexibilitySection from "./components/FlexibilitySection"
+import BNPLProblemsSection from "./components/BNPLProblemsSection"
+import UserFlowSection from "./components/UserFlowSection"
 
 export default function Home() {
   useEffect(() => {
@@ -45,8 +47,7 @@ export default function Home() {
                 The Future of <span className="text-gradient">Payments</span>
               </h1>
               <p className="text-body text-base sm:text-lg lg:text-2xl text-gray-300 max-w-2xl sm:max-w-4xl mx-auto">
-                Experience the first on-chain Buy Now, Pay Later platform that pays you back through yield generation
-              </p>
+                Buy Now , Pay Later + Pay with Yield           </p>
             </div>
 
             <div
@@ -117,6 +118,12 @@ export default function Home() {
         </div>
       </section>
 
+      <BNPLProblemsSection/>
+
+      <div className="scroll-reveal animate-fade-in-up">
+        <UserFlowSection />
+      </div>
+
       {/* How It Works Section */}
       <section id="how-it-works" className="py-12 sm:py-20 lg:py-24 px-2 sm:px-4 lg:px-8 bg-white/[0.01]">
         <div className="max-w-7xl mx-auto">
@@ -182,6 +189,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+    
 
       {/* Footer */}
       <footer className="py-8 px-2 sm:py-12 sm:px-4 lg:px-8 border-t border-white/5">
@@ -211,6 +219,8 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      
     </>
   )
 }

@@ -7,7 +7,7 @@ export default function MerchantPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden scroll-reveal animate-fade-in-up">
         <div className="absolute top-20 left-10 w-40 h-40 bg-[#C9F299]/8 rounded-full blur-3xl animate-float"></div>
         <div className="absolute bottom-20 right-10 w-32 h-32 bg-[#A8E063]/6 rounded-full blur-2xl animate-float"></div>
 
@@ -42,7 +42,7 @@ export default function MerchantPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-6 lg:py-24 px-4 sm:px-6 lg:px-8">
+      <section className="py-6 lg:py-24 px-4 sm:px-6 lg:px-8 scroll-reveal animate-fade-in-up">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-display text-3xl sm:text-4xl lg:text-5xl mb-6 text-white">
@@ -54,7 +54,7 @@ export default function MerchantPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            <div className="glass-card rounded-2xl p-6 hover:bg-white/5 transition-premium hover-lift">
+            <div className="glass-card rounded-2xl p-6 hover:bg-white/5 transition-premium hover-lift scroll-reveal animate-fade-in-up">
               <div className="benefit-icon">
                 <DollarSign size={24} className="text-black" />
               </div>
@@ -64,7 +64,7 @@ export default function MerchantPage() {
               </p>
             </div>
 
-            <div className="glass-card rounded-2xl p-6 hover:bg-white/5 transition-premium hover-lift">
+            <div className="glass-card rounded-2xl p-6 hover:bg-white/5 transition-premium hover-lift scroll-reveal animate-fade-in-up" style={{ animationDelay: "100ms" }}>
               <div className="benefit-icon">
                 <Zap size={24} className="text-black" />
               </div>
@@ -74,7 +74,7 @@ export default function MerchantPage() {
               </p>
             </div>
 
-            <div className="glass-card rounded-2xl p-6 hover:bg-white/5 transition-premium hover-lift">
+            <div className="glass-card rounded-2xl p-6 hover:bg-white/5 transition-premium hover-lift scroll-reveal animate-fade-in-up" style={{ animationDelay: "200ms" }}>
               <div className="benefit-icon">
                 <Users size={24} className="text-black" />
               </div>
@@ -88,7 +88,7 @@ export default function MerchantPage() {
       </section>
 
       {/* Trust Signals */}
-      <section className="py-12 sm:py-20 lg:py-24 px-2 sm:px-4 lg:px-8 bg-white/[0.01]">
+      <section className="py-12 sm:py-20 lg:py-24 px-2 sm:px-4 lg:px-8 bg-white/[0.01] scroll-reveal animate-fade-in-up">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 sm:mb-16">
             <h2 className="text-display text-2xl sm:text-4xl lg:text-5xl mb-4 sm:mb-6 text-white">
@@ -97,7 +97,7 @@ export default function MerchantPage() {
           </div>
 
           <div className="grid  grid-cols-3 lg:grid-cols-3 gap-8 sm:gap-12 lg:gap-16 text-center">
-            <div>
+            <div className="scroll-reveal animate-fade-in-up">
               <div className="benefit-icon mx-auto mb-2">
                 <Building2 size={30} className="text-black" />
               </div>
@@ -105,7 +105,7 @@ export default function MerchantPage() {
               <p className="text-body text-gray-400 text-base sm:text-lg lg:text-xl">Partner Merchants</p>
             </div>
 
-            <div>
+            <div className="scroll-reveal animate-fade-in-up" style={{ animationDelay: "100ms" }}>
               <div className="benefit-icon mx-auto mb-2">
                 <TrendingUp size={30} className="text-black" />
               </div>
@@ -113,7 +113,7 @@ export default function MerchantPage() {
               <p className="text-body text-gray-400 text-base sm:text-lg lg:text-xl">Volume Processed</p>
             </div>
 
-            <div>
+            <div className="scroll-reveal animate-fade-in-up" style={{ animationDelay: "200ms" }}>
               <div className="benefit-icon mx-auto mb-2">
                 <Users size={30} className="text-black" />
               </div>
@@ -125,7 +125,7 @@ export default function MerchantPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 lg:py-24 px-4 sm:px-6 lg:px-8 scroll-reveal animate-fade-in-up">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-display text-3xl sm:text-4xl lg:text-5xl mb-6 text-white">
@@ -137,7 +137,7 @@ export default function MerchantPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="glass-card rounded-2xl p-8 hover-lift transition-premium">
+            <div className="glass-card rounded-2xl p-8 hover-lift transition-premium scroll-reveal animate-fade-in-up">
               <h3 className="text-title text-2xl mb-4 text-white">Book a Demo</h3>
               <p className="text-body text-gray-400 mb-6">
                 Schedule a personalized demo to see how Yumi can transform your checkout experience
@@ -145,7 +145,7 @@ export default function MerchantPage() {
               <button className="btn-primary w-full py-3 rounded-full focus-ring">Schedule Demo</button>
             </div>
 
-            <div className="glass-card rounded-2xl p-8 hover-lift transition-premium">
+            <div className="glass-card rounded-2xl p-8 hover-lift transition-premium scroll-reveal animate-fade-in-up" style={{ animationDelay: "100ms" }}>
               <h3 className="text-title text-2xl mb-4 text-white">Start Integration</h3>
               <p className="text-body text-gray-400 mb-6">
                 Access our developer docs and start integrating Yumi into your platform today
