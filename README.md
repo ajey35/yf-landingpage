@@ -36,12 +36,15 @@ git clone https://github.com/your-username/yumi-finance-landing.git
 ```bash
 cd yumi-finance-landing
 
-
+```
 ```bash
 npm install  # or yarn install
+
+```
 
 
 ```bash
 
 npm run dev # or yarn dev
 
+```
