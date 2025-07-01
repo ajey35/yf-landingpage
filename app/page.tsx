@@ -8,6 +8,8 @@ import BenefitCard from "./components/BenefitCard"
 import FlexibilitySection from "./components/FlexibilitySection"
 import BNPLProblemsSection from "./components/BNPLProblemsSection"
 import UserFlowSection from "./components/UserFlowSection"
+import HowItWorksFlow from "./components/HowItWorksFlow"
+import WhyWeWinSection from "./components/WhyWeWinSection"
 
 export default function Home() {
   useEffect(() => {
@@ -122,6 +124,14 @@ export default function Home() {
 
       <div className="scroll-reveal animate-fade-in-up">
         <UserFlowSection />
+      </div>
+
+      <div className="scroll-reveal animate-fade-in-up">
+        <HowItWorksFlow />
+      </div>
+
+      <div className="scroll-reveal animate-fade-in-up">
+        <WhyWeWinSection />
       </div>
 
       {/* How It Works Section */}

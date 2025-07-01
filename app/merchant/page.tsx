@@ -1,19 +1,48 @@
+"use client"
+import { useEffect } from "react"
 import { ArrowRight, Calendar, DollarSign, TrendingUp, Users, Building2, Zap } from "lucide-react"
 import Navigation from "../components/Navigation"
 
 export default function MerchantPage() {
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px",
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !entry.target.classList.contains("revealed")) {
+          const delay = entry.target.getAttribute("data-delay")
+          if (delay) {
+            setTimeout(() => {
+              entry.target.classList.add("revealed")
+            }, parseInt(delay))
+          } else {
+            entry.target.classList.add("revealed")
+          }
+        }
+      })
+    }, observerOptions)
+
+    const elements = document.querySelectorAll(".scroll-reveal")
+    elements.forEach((el) => observer.observe(el))
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <>
       <Navigation />
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden scroll-reveal animate-fade-in-up">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden scroll-reveal" data-delay="0">
         <div className="absolute top-20 left-10 w-40 h-40 bg-[#C9F299]/8 rounded-full blur-3xl animate-float"></div>
         <div className="absolute bottom-20 right-10 w-32 h-32 bg-[#A8E063]/6 rounded-full blur-2xl animate-float"></div>
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
           <div className="text-center space-y-8">
-            <div className="space-y-6 animate-fade-in-up">
+            <div className="space-y-6 scroll-reveal" data-delay="100">
               <h1 className="text-hero text-4xl sm:text-5xl lg:text-6xl text-white">
                 Grow Sales, Lower Fees
                 <br />
@@ -25,8 +54,8 @@ export default function MerchantPage() {
             </div>
 
             <div
-              className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center max-w-md sm:max-w-none mx-auto animate-fade-in-up"
-              style={{ animationDelay: "400ms" }}
+              className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center max-w-md sm:max-w-none mx-auto scroll-reveal"
+              data-delay="200"
             >
               <button className="group btn-primary w-full sm:w-auto px-8 py-3 rounded-full text-body focus-ring flex items-center justify-center space-x-2">
                 <Calendar size={20} />
@@ -42,8 +71,8 @@ export default function MerchantPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-6 lg:py-24 px-4 sm:px-6 lg:px-8 scroll-reveal animate-fade-in-up">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-6 lg:py-10 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto scroll-reveal" data-delay="0">
           <div className="text-center mb-16">
             <h2 className="text-display text-3xl sm:text-4xl lg:text-5xl mb-6 text-white">
               Why Merchants Choose <span className="text-gradient">Yumi</span>
@@ -54,7 +83,7 @@ export default function MerchantPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            <div className="glass-card rounded-2xl p-6 hover:bg-white/5 transition-premium hover-lift scroll-reveal animate-fade-in-up">
+            <div className="glass-card rounded-2xl p-6 hover:bg-white/5 transition-premium hover-lift scroll-reveal" data-delay="100">
               <div className="benefit-icon">
                 <DollarSign size={24} className="text-black" />
               </div>
@@ -64,7 +93,7 @@ export default function MerchantPage() {
               </p>
             </div>
 
-            <div className="glass-card rounded-2xl p-6 hover:bg-white/5 transition-premium hover-lift scroll-reveal animate-fade-in-up" style={{ animationDelay: "100ms" }}>
+            <div className="glass-card rounded-2xl p-6 hover:bg-white/5 transition-premium hover-lift scroll-reveal" data-delay="200">
               <div className="benefit-icon">
                 <Zap size={24} className="text-black" />
               </div>
@@ -74,7 +103,7 @@ export default function MerchantPage() {
               </p>
             </div>
 
-            <div className="glass-card rounded-2xl p-6 hover:bg-white/5 transition-premium hover-lift scroll-reveal animate-fade-in-up" style={{ animationDelay: "200ms" }}>
+            <div className="glass-card rounded-2xl p-6 hover:bg-white/5 transition-premium hover-lift scroll-reveal" data-delay="300">
               <div className="benefit-icon">
                 <Users size={24} className="text-black" />
               </div>
@@ -86,7 +115,7 @@ export default function MerchantPage() {
           </div>
         </div>
       </section>
-
+      
       {/* Trust Signals */}
       <section className="py-12 sm:py-20 lg:py-24 px-2 sm:px-4 lg:px-8 bg-white/[0.01] scroll-reveal animate-fade-in-up">
         <div className="max-w-7xl mx-auto">
@@ -184,5 +213,7 @@ export default function MerchantPage() {
         </div>
       </footer>
     </>
+
   )
 }
+  
