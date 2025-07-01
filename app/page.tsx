@@ -188,6 +188,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
             <div className="flex items-center">
+              <img src="/image.png" alt="Yumi Finance Logo" className="h-10 w-8 mr-1" />
               <span className="text-title text-lg font-semibold text-white">Yumi Finance</span>
             </div>
             <div className="flex flex-wrap justify-center md:justify-end gap-6 text-gray-400">

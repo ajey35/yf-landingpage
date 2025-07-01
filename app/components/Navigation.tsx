@@ -32,29 +32,23 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-18">
           {/* Enhanced Logo */}
-          <div className="flex items-center group cursor-pointer">
+          <div className="flex items-center group cursor-pointer min-w-0">
             {/* Logo Icon */}
-            <div className="relative mr-3">
-              <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-[#C9F299] via-[#B8E085] to-[#A8E063] rounded-xl lg:rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-[#C9F299]/30 transition-all duration-300 group-hover:scale-105">
-                <span className="text-black font-bold text-lg lg:text-xl">Y</span>
-
-                {/* Animated glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#C9F299] to-[#A8E063] rounded-xl lg:rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 animate-pulse"></div>
-
-                {/* Sparkle effect */}
-                <Sparkles
-                  size={12}
-                  className="absolute -top-1 -right-1 text-[#C9F299] opacity-0 group-hover:opacity-100 transition-all duration-300 animate-bounce"
-                />
-              </div>
+            <div className="relative mr-3 flex-shrink-0 flex items-center justify-center">
+              <img
+                src="/image.png"
+                alt="Yumi Finance Logo"
+                className="h-10 w-10 lg:h-12 lg:w-12 object-contain drop-shadow-lg rounded-md bg-white/5 p-1 border border-white/10"
+                style={{ maxWidth: '3rem', height: 'auto' }}
+              />
             </div>
 
             {/* Logo Text */}
-            <div className="flex flex-col">
-              <span className="text-title text-xl lg:text-2xl font-bold text-white group-hover:text-gradient transition-all duration-300 tracking-tight">
+            <div className="flex flex-col min-w-0">
+              <span className="text-title text-lg sm:text-xl lg:text-2xl font-bold text-white group-hover:text-gradient transition-all duration-300 tracking-tight truncate">
                 Yumi Finance
               </span>
-              <span className="text-caption text-xs text-[#C9F299]/70 font-medium tracking-wider hidden lg:block group-hover:text-[#C9F299] transition-colors duration-300">
+              <span className="text-caption text-xs text-[#C9F299]/70 font-medium tracking-wider hidden sm:block group-hover:text-[#C9F299] transition-colors duration-300 truncate">
                 BNPL REIMAGINED
               </span>
             </div>
