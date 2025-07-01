@@ -6,7 +6,7 @@ This landing page is designed to communicate Yumi's value to consumers and merch
 
 ---
 
-## 🚀 Features
+## 1. Features
 
 - **Modern, Responsive UI**: Premium, mobile-first design with smooth transitions and glassmorphism.
 - **Section Highlights**:
@@ -25,7 +25,7 @@ This landing page is designed to communicate Yumi's value to consumers and merch
 
 ---
 
-## 🛠 Tech Stack
+## 2. Tech Stack
 
 - **Next.js** (App Router + TypeScript)
 - **Tailwind CSS** (utility-first styling)
@@ -36,7 +36,7 @@ This landing page is designed to communicate Yumi's value to consumers and merch
 
 ---
 
-## 🛠 Getting Started
+## 3. Getting Started
 
 ### 1. Clone the Repository
 
@@ -72,7 +72,7 @@ Visit [http://localhost:3000](http://localhost:3000) to view the landing page.
 
 ---
 
-## 📁 Project Structure
+## 4. Project Structure
 
 - `app/` — Main Next.js app directory
   - `components/` — Modular React components for each section
@@ -85,7 +85,7 @@ Visit [http://localhost:3000](http://localhost:3000) to view the landing page.
 
 ---
 
-## ✨ Customization
+## 5. Customization
 
 - **Branding**: Replace images/logos in `public/` as needed.
 - **Team/Content**: Update section data in the respective components.
@@ -93,19 +93,19 @@ Visit [http://localhost:3000](http://localhost:3000) to view the landing page.
 
 ---
 
-## 📦 Deployment
+## 6. Deployment
 
 This project is ready to deploy on **Vercel**, **Netlify**, or any platform supporting Next.js.
 
 ---
 
-## 🤝 Contributing
+## 7. Contributing
 
 Pull requests and issues are welcome! For major changes, please open an issue first to discuss what you'd like to change.
 
 ---
 
-## 📝 License
+## 8. License
 
-[MIT](LICENSE) — © Yumi Finance
+[MIT](LICENSE) — © Yumi 🤍 Finance
 
