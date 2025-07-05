@@ -67,37 +67,35 @@ export default function Navigation() {
           WebkitBackdropFilter: scrolled ? 'blur(20px)' : 'none' 
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+          <div className="flex justify-between items-center h-16 sm:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 sm:gap-3 group cursor-pointer min-w-0" prefetch={false}>
-            {/* Logo Icon */}
-            <div className="flex-shrink-0 flex items-center justify-center">
-              <img
-                src="/image.png"
-                alt="Yumi Finance Logo"
-                className="h-8 w-8 sm:h-10 sm:w-10 object-contain drop-shadow-lg rounded-md bg-white/5 p-1 border border-white/10"
-                style={{ maxWidth: '2.5rem', height: 'auto' }}
-              />
-            </div>
-            {/* Logo Text */}
-            <div className="flex flex-col min-w-0 justify-center">
-              <span className="text-title text-base sm:text-lg font-bold text-white group-hover:text-gradient transition-all duration-300 tracking-tight truncate">
-                Yumi Finance
-              </span>
-              <span className="text-caption text-xs text-[#C9F299]/70 font-medium tracking-wider hidden sm:block group-hover:text-[#C9F299] transition-colors duration-300 truncate">
-                BNPL REIMAGINED
-              </span>
-            </div>
-          </Link>
+              <div className="flex-shrink-0 flex items-center justify-center">
+                <img
+                  src="/image.png"
+                  alt="Yumi Finance Logo"
+                  className="h-8 w-8 sm:h-10 sm:w-10 object-contain drop-shadow-lg rounded-md bg-white/5 p-1 border border-white/10"
+                  style={{ maxWidth: '2.5rem', height: 'auto' }}
+                />
+              </div>
+              <div className="flex flex-col min-w-0 justify-center">
+                <span className="text-title text-base sm:text-lg font-bold text-white group-hover:text-gradient transition-all duration-300 tracking-tight truncate">
+                  Yumi Finance
+                </span>
+                <span className="text-caption text-xs text-[#C9F299]/70 font-medium tracking-wider hidden sm:block group-hover:text-[#C9F299] transition-colors duration-300 truncate">
+                  BNPL REIMAGINED
+                </span>
+              </div>
+            </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-2">
+            <div className="hidden lg:flex items-center space-x-1 xl:space-x-2">
               {NAV_ITEMS.map((item) => (
                 <button
                   key={item.label}
                   onClick={() => handleNavClick(item.id!)}
-                  className="relative px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-all duration-300 group"
+                  className="relative px-3 xl:px-4 py-2 text-xs sm:text-sm font-medium text-gray-300 hover:text-white transition-all duration-300 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C9F299] focus-visible:ring-offset-2"
                 >
                   <span className="relative z-10">{item.label}</span>
                   <div className="absolute inset-0 bg-white/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -107,17 +105,17 @@ export default function Navigation() {
             </div>
 
             {/* Right side buttons */}
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-2 sm:space-x-4">
               {/* For Merchants - Desktop */}
               <Link
                 href={MERCHANT_ITEM.href}
-                className="hidden md:flex items-center px-4 py-2 text-sm font-medium text-[#C9F299] border border-[#C9F299]/30 rounded-full hover:border-[#C9F299] hover:bg-[#C9F299]/10 transition-all duration-300"
+                className="hidden md:flex items-center px-4 py-2 text-xs sm:text-sm font-medium text-[#C9F299] border border-[#C9F299]/30 rounded-full hover:border-[#C9F299] hover:bg-[#C9F299]/10 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C9F299] focus-visible:ring-offset-2"
               >
                 {MERCHANT_ITEM.label}
               </Link>
 
               {/* Get Started Button - Desktop */}
-              <button className="hidden md:flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-[#C9F299] to-[#A3E635] text-black font-semibold rounded-full hover:shadow-lg hover:shadow-[#C9F299]/25 hover:scale-105 transition-all duration-300 group">
+              <button className="hidden md:flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-[#C9F299] to-[#A3E635] text-black font-semibold rounded-full hover:shadow-lg hover:shadow-[#C9F299]/25 hover:scale-105 transition-all duration-300 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C9F299] focus-visible:ring-offset-2">
                 <span>Get Started</span>
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
               </button>
@@ -125,7 +123,7 @@ export default function Navigation() {
               {/* Mobile menu button */}
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="lg:hidden relative p-2 text-gray-300 hover:text-white transition-colors duration-300"
+                className="lg:hidden relative p-2 text-gray-300 hover:text-white transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C9F299] focus-visible:ring-offset-2"
                 aria-label="Toggle menu"
               >
                 {isOpen ? <X size={24} /> : <Menu size={24} />}

@@ -58,19 +58,19 @@ export default function UserFlowSection() {
   return (
     <section className="relative w-full bg-black py-24 sm:py-32 px-4 sm:px-6 lg:px-16 overflow-hidden">
       {/* Ambient blur blobs */}
-      <div className="absolute -top-24 -left-20 w-72 h-72 bg-[#C9F299]/10 rounded-full blur-[120px] opacity-60 animate-float-slow z-0"></div>
-      <div className="absolute bottom-0 -right-20 w-64 h-64 bg-[#A8E063]/10 rounded-full blur-[100px] opacity-50 animate-float-slower z-0"></div>
+      <div className="absolute -top-24 -left-20 w-56 h-56 sm:w-72 sm:h-72 bg-[#22c55e]/15 rounded-full blur-[100px] opacity-60 animate-float-slow z-0"></div>
+      <div className="absolute bottom-0 -right-20 w-44 h-44 sm:w-64 sm:h-64 bg-[#22c55e]/10 rounded-full blur-[80px] opacity-50 animate-float-slower z-0"></div>
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center text-center">
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight scroll-reveal">
+        <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight scroll-reveal">
           Effortless <span className="text-gradient">User Flow</span>
         </h2>
-        <p className="text-base sm:text-lg text-gray-400 mb-16 max-w-2xl mx-auto scroll-reveal">
+        <p className="text-base sm:text-lg text-gray-400 mb-10 sm:mb-16 max-w-2xl mx-auto scroll-reveal">
           Experience a seamless journey from checkout to earning yield. Yumi makes every step intuitive and rewarding.
         </p>
         <div className="relative w-full">
           {/* Connecting line for desktop */}
-          <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-[#C9F299]/20 via-[#A8E063]/10 to-transparent -z-10" style={{transform: 'translateY(-50%)'}}></div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+          <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-[#22c55e]/20 via-[#22c55e]/10 to-transparent -z-10" style={{transform: 'translateY(-50%)'}}></div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
             {steps.map((step, idx) => (
               <StepCard key={step.number} step={step} delay={idx * 200} />
             ))}

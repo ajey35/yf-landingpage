@@ -29,7 +29,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`}>
-      <body className="font-sans bg-black text-white antialiased overflow-x-hidden">{children}</body>
+      <body className="font-sans text-white antialiased overflow-x-hidden bg-black">
+        <div className="bg-glow bg-glow-1"></div>
+        <div className="bg-glow bg-glow-2"></div>
+        {children}
+      </body>
     </html>
   )
 }

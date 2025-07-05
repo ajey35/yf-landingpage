@@ -41,21 +41,22 @@ export default function Home() {
       {/* Hero Section */}
       <section className="min-h-[80vh] flex items-center justify-center relative overflow-hidden px-2 sm:px-4">
         {/* Background Elements */}
-        <div className="absolute top-10 left-2 w-28 h-28 sm:w-40 sm:h-40 bg-[#C9F299]/8 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-10 right-2 w-24 h-24 sm:w-32 sm:h-32 bg-[#A8E063]/6 rounded-full blur-2xl animate-float"></div>
+        <div className="absolute top-6 left-2 w-24 h-24 sm:w-40 sm:h-40 bg-[#22c55e]/20 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-6 right-2 w-20 h-20 sm:w-32 sm:h-32 bg-[#22c55e]/15 rounded-full blur-2xl animate-float"></div>
 
-        <div className="relative z-10 w-full max-w-3xl sm:max-w-6xl mx-auto px-2 sm:px-4 lg:px-8 pt-16 pb-10 sm:pt-20 sm:pb-16">
+        <div className="relative z-10 w-full max-w-2xl sm:max-w-4xl lg:max-w-6xl mx-auto px-2 sm:px-4 lg:px-8 pt-16 pb-10 sm:pt-20 sm:pb-16">
           <div className="text-center space-y-6 sm:space-y-8">
             <div className="space-y-4 sm:space-y-6 animate-fade-in-up">
-              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white text-hero">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white text-hero">
                 The Future of <span className="text-gradient">Payments</span>
               </h1>
-              <p className="text-body text-base sm:text-lg lg:text-2xl text-gray-300 max-w-2xl sm:max-w-4xl mx-auto">
-                Buy Now , Pay Later + Pay with Yield           </p>
+              <p className="text-body text-base sm:text-lg lg:text-2xl text-gray-300 max-w-2xl sm:max-w-3xl mx-auto">
+                Buy Now, Pay Later + Pay with Yield
+              </p>
             </div>
 
             <div
-              className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center items-center max-w-xs sm:max-w-none mx-auto animate-fade-in-up"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center items-center w-full max-w-xs sm:max-w-none mx-auto animate-fade-in-up"
               style={{ animationDelay: "200ms" }}
             >
               <button className="group btn-primary w-full sm:w-auto px-6 sm:px-8 py-3 rounded-full text-body focus-ring">
@@ -70,20 +71,20 @@ export default function Home() {
             </div>
 
             <div
-              className="grid  grid-cols-3 sm:grid-cols-3 gap-6 sm:gap-8 lg:gap-16 max-w-xs pt-6 sm:max-w-4xl mx-auto mt-20 sm:mt-20 animate-fade-in-up"
+              className="grid grid-cols-3 gap-4 sm:gap-8 lg:gap-16 max-w-xs pt-6 sm:max-w-4xl mx-auto mt-12 sm:mt-20 animate-fade-in-up"
               style={{ animationDelay: "400ms" }}
             >
               <div className="text-center">
                 <div className="text-display text-3xl sm:text-4xl lg:text-5xl text-gradient mb-2">0%</div>
-                <p className="text-body text-gray-400 text-sm sm:text-base">Interest Rate</p>
+                <p className="text-body text-gray-400 text-xs sm:text-base">Interest Rate</p>
               </div>
               <div className="text-center">
                 <div className="text-display text-3xl sm:text-4xl lg:text-5xl text-gradient mb-2">100%</div>
-                <p className="text-body text-gray-400 text-sm sm:text-base">On-Chain</p>
+                <p className="text-body text-gray-400 text-xs sm:text-base">On-Chain</p>
               </div>
               <div className="text-center">
                 <div className="text-display text-3xl sm:text-4xl lg:text-5xl text-gradient mb-2">24/7</div>
-                <p className="text-body text-gray-400 text-sm sm:text-base">Available</p>
+                <p className="text-body text-gray-400 text-xs sm:text-base">Available</p>
               </div>
             </div>
           </div>

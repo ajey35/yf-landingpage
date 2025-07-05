@@ -22,7 +22,7 @@
 
   body {
     font-family: var(--font-inter);
-    background: #000000;
+    background: #0b0f0c;
     color: #ffffff;
     overflow-x: hidden;
     line-height: 1.6;
@@ -409,4 +409,31 @@
 ::selection {
   background: rgba(201, 242, 153, 0.3);
   color: #ffffff;
+}
+
+/* Ambient green glow backgrounds */
+.bg-glow {
+  pointer-events: none;
+  position: fixed;
+  z-index: 0;
+  border-radius: 9999px;
+  filter: blur(80px);
+  opacity: 0.40;
+  mix-blend-mode: lighten;
+}
+
+.bg-glow-1 {
+  width: 600px;
+  height: 600px;
+  left: -200px;
+  bottom: -200px;
+  background: radial-gradient(circle, #22c55e 0%, #0b0f0c 80%);
+}
+
+.bg-glow-2 {
+  width: 500px;
+  height: 500px;
+  right: -150px;
+  top: 100px;
+  background: radial-gradient(circle, #22c55e 0%, #0b0f0c 80%);
 }
